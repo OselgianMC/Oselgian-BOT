@@ -1,0 +1,16 @@
+{
+  "name": "oselgianbot",
+  "version": "0.0.2",
+  "description": "Oselgian official bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "Code ran correctly"
+  },
+  "keywords": [],
+  "author": "TheBlackMamba",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "redis": "^4.0.6"
+  }
+}
