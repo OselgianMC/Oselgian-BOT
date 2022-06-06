@@ -31,7 +31,7 @@ client.on("ready", () =>
             const embed = new Discord.MessageEmbed()
             .setColor("#0388fc")
             .setTitle(`Membri totali`)
-            .setURL("https://chardoxzard.github.io/")
+            .setURL("https://github.com/OselgianMC/Oselgian-BOT/")
             .setThumbnail("attachment://img.png")
             .setDescription(`Questo server fantastico ha un totale di ${guild.memberCount} membri! Wow, impressionante!👀`);
 
@@ -63,7 +63,7 @@ client.on("ready", () =>
         }
         else
         {
-            message.reply("Non hai i permessi per pulire i messaggi lol");
+            message.reply("Non hai i permessi per pulire i messaggi, lol");
         }
     });
 
@@ -129,7 +129,7 @@ client.on("ready", () =>
         const embed = new Discord.MessageEmbed()
             .setColor("#0388fc")
             .setTitle(`${name} info`)
-            .setURL("https://chardoxzard.github.io/")
+            .setURL("https://github.com/OselgianMC/Oselgian-BOT")
             .setThumbnail("attachment://img.png")
             .addFields
             (
@@ -162,7 +162,7 @@ client.on("ready", () =>
         const aembed = new Discord.MessageEmbed()
             .setColor("#0388fc")
             .setTitle("Impara i miei comandi!")
-            .setURL("https://chardoxzard.github.io/")
+            .setURL("https://github.com/OselgianMC/Oselgian-BOT")
             .setThumbnail("attachment://img.png")
             .addFields
             (
@@ -181,17 +181,17 @@ client.on("ready", () =>
         const embed = new Discord.MessageEmbed()
             .setColor("#0388fc")
             .setTitle("Impara i miei comandi da vero staffer!")
-            .setURL("https://chardoxzard.github.io/")
+            .setURL("https://github.com/OselgianMC/Oselgian-BOT")
             .setThumbnail("attachment://img.png")
             .addFields
             (
                 {name: "/pulisci:", value: "Pulisce tutti i messaggi in un canale"},
                 {name: "/canaletxt <Nome canale>:", value: "Crea un canale testuale"},
                 {name: "/canalevc <Nome canale>:", value: "Crea un canale vocale"},
-                {name: "/banna <@utente>:", value: "Banna membri"},
-                {name: "/kicka <@utente>:", value: "Kicka membri"},
-                {name: "/muta <@utente>:", value: "Muta un utente"},
-                {name: "/muta <@utente già stato mutato>:", value: "Smuta un utente"},
+                {name: "/ban <@utente>:", value: "Banna membri"},
+                {name: "/kick <@utente>:", value: "Kicka membri"},
+                {name: "/mute <@utente>:", value: "Muta un utente"},
+                {name: "/unmute <@utente già stato mutato>:", value: "Smuta un utente"},
                 {name: "/chiudi:", value: "Chiude un ticket"},
             );
 
@@ -206,7 +206,7 @@ client.on("ready", () =>
     });
 
     // Ban command
-    command(client, "banna", (message) => 
+    command(client, "ban", (message) => 
     {
         const {member, mentions} = message;
         const tag =    `<@${member.id}>`;
@@ -377,7 +377,7 @@ client.on("ready", () =>
             const rrembed = new Discord.MessageEmbed()
             .setColor("#0388fc")
             .setTitle(`Non inviare una gif tanto non funzionerà`)
-            .setURL("https://chardoxzard.github.io/")
+            .setURL("https://github.com/OselgianMC/Oselgian-BOT")
             .setThumbnail("attachment://nerd.jpg")
             .setDescription(`${member} Bruh veramente pensavi di rickrollare qualcuno lol😹`);
 
@@ -391,4 +391,4 @@ client.on("ready", () =>
     });
 });
 
-client.login(config.token);
+client.login(process.env.token);
